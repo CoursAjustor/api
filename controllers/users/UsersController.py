@@ -1,7 +1,8 @@
 from flask import jsonify
+from services.UserService import UserService
 
 class UsersController(object):
   @staticmethod
   def getAll():
-    return jsonify([{"id": 1, "name": "plop"}])
+    return jsonify(UserService.getAll())
     
